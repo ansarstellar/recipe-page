@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Young Serif", serif; */
+    /* "Outfit", sans-serif; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(30, 54%, 90%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 500px;
+    height: 100%;
+    overflow-y: scroll; /* Makes the div scrollable vertically */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.container .recipe-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.title {
+    font-family: "Young Serif", serif;
+}
+
+.info {
+    font-family: "Outfit", sans-serif;
+}
+
+.container .intro h1 {
+    font-weight: 400;
+    font-size: 28px;
+    margin-top: 12px;
+}
+
+.container .intro p {
+    font-size: 11px;
+    font-weight: 400;
+    color: gray;
+    margin-top: 12px;
+}
+
+.li-titles {
+    font-weight: bold;
+    color: hsla(0, 3%, 6%, 0.822);
+}
+
+.preparation {
+    background-color: hsl(330, 100%, 98%);
+    padding: 24px;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+.preparation-elements {
+    padding-left: 20px;
+}
+
+.prep-title {
+    color: hsl(332, 51%, 32%);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.custom-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+    margin-top: 8px;
+}
+
+.custom-list li {
+    position: relative;
+    padding-left: 30px; /* Adjust the space between bullet and text */
+    font-size: 12px;
+    color: grey;
+    margin-bottom: 8px;
+}
+
+.custom-list li::before {
+    content: "•"; /* Use a bullet character (you can also use a Unicode character like \2022) */
+    color: hsl(332, 51%, 32%); /* Custom bullet color */
+    font-size: 12px; /* Adjust the bullet size */
+    position: absolute;
+    left: 0; /* Position the bullet */
+    top: 0; /* Align the bullet vertically with the text */
+}
+
+.ingredients {
+    margin-top: 16px;
+}
+
+.ingredients h1 {
+    color: hsl(14, 45%, 36%);
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.ingredients-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+    margin-top: 8px;
+}
+
+.ingredients-list li {
+    position: relative;
+    padding-left: 30px; /* Adjust the space between bullet and text */
+    font-size: 12px;
+    color: grey;
+    margin-bottom: 8px;
+}
+
+.ingredients-list li::before {
+    content: "•"; /* Use a bullet character (you can also use a Unicode character like \2022) */
+    color: hsl(14, 45%, 36%); /* Custom bullet color */
+    font-size: 12px; /* Adjust the bullet size */
+    position: absolute;
+    left: 0; /* Position the bullet */
+    top: 0; /* Align the bullet vertically with the text */
+}
+
+hr {
+    border: none;           /* Removes default styling */
+    height: 1px;            /* Adjusts thickness */
+    background-color: rgba(128, 128, 128, 0.324); /* Custom color */
+    width: 100%;             /* Custom width */
+    margin-top: 20px;
+    margin-bottom: 20px;       /* Space above and below */
+}
+
+.instructions h1 {
+    color: hsl(14, 45%, 36%);
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.instructions-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+    margin-top: 8px;
+}
+
+ol.instructions-list {
+    list-style-position: inside; /* Ensures numbers are inside the list */
+    padding-left: 0; /* Remove default padding */
+    counter-reset: item; /* Resets the counter for the custom numbers */
+
+}
+
+/* Styling each list item */
+ol.instructions-list li {
+    position: relative;
+    padding-left: 30px; /* Creates space between the number and text */
+    font-size: 16px; /* Decreases the size of the text */
+    margin-bottom: 15px; /* Adds space between each list item */
+    color: grey;
+}
+
+/* Custom style for the list numbers */
+ol.instructions-list li::before {
+    font-family: "Outfit", sans-serif;;
+    content: counter(item) ". "; /* Automatically adds the numbers */
+    counter-increment: item; /* Increments the counter for each item */
+    position: absolute;
+    left: 0; /* Position the number */
+    color: hsl(14, 45%, 36%); /* Custom color for the numbers */
+    font-size: 16px; /* Change size of the numbers */
+}
+
+.nutrition h1 {
+    color: hsl(14, 45%, 36%);
+    font-size: 22px;
+    font-weight: 100;
+}
+   .nutrition p {
+font-size: 11px;
+font-weight: 400;
+color: gray;
+margin-top: 12px;
+}
+
+
+table {
+    width: 100%;              /* Full width table */
+    border-collapse: collapse; /* Prevent double borders */
+    font-size: 14px;
+}
+
+td {
+    padding: 10px 20px;        /* Add padding for better spacing */
+    text-align: left;          /* Align text to the left */
+}
+
+tr:not(:last-child) td {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.324); /* Adds a line only between rows */
+}
+
+table, td {
+    border: none; /* No other borders except the ones between rows */
+}
+
+.numbers {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
+.properties {
+    color: grey;
+}
+
+.table-nutrition {
+    padding: 10px;
+}
